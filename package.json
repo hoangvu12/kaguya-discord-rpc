@@ -20,7 +20,8 @@
   "config": {
     "forge": {
       "packagerConfig": {
-        "icon": "assets/icons/build-icons/icon"
+        "icon": "assets/icons/build-icons/icon",
+        "executableName": "kaguya-discord-rpc"
       },
       "makers": [
         {
