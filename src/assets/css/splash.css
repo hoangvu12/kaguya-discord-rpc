@@ -1,0 +1,36 @@
+/* Main */
+@import "./reset.css";
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans&family=Nunito+Sans&display=swap");
+
+body {
+  margin: 0;
+  padding: 0;
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-app-region: drag;
+  background-color: #1a1a1a;
+  color: white;
+  font-family: "Fira Sans", Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+
+.logo-container {
+  width: 64px;
+  height: 64px;
+}
+
+.logo-container img {
+  width: 100%;
+  height: 100%;
+}
+
+.title {
+  margin-top: 0.5rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+}

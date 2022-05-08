@@ -1,0 +1,22 @@
+/* Main */
+@import "./reset.css";
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #0d0d0d;
+  color: white;
+  font-family: "Roboto", Arial, sans-serif;
+}
+
+#main {
+  width: 100%;
+  height: calc(100vh - var(--title-bar-height));
+  position: relative;
+}
+
+webview {
+  position: absolute;
+  inset: 0;
+}
