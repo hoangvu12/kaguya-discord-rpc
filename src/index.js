@@ -21,6 +21,8 @@ function setActivity(activity) {
   rpc.setActivity(activity);
 }
 
+let mainWindow, splashWindow;
+
 const isSquirrelStartup = require("electron-squirrel-startup");
 
 // Handle creating/removing shortcuts on Windows when installing/uninstalling.
@@ -35,7 +37,7 @@ const createWindow = () => {
   const { width: screenWidth, height: screenHeight } =
     screen.getPrimaryDisplay().size;
 
-  const mainWindow = new BrowserWindow({
+  mainWindow = new BrowserWindow({
     autoHideMenuBar: true,
     show: false,
     icon: path.join(__dirname, "../assets/icons/png/64x64.png"),
@@ -52,7 +54,7 @@ const createWindow = () => {
     },
   });
 
-  const splashWindow = new BrowserWindow({
+  splashWindow = new BrowserWindow({
     width: 224,
     height: 400,
     frame: false,
@@ -73,17 +75,23 @@ const createWindow = () => {
   };
 
   ipcMain.on("hide-splash", () => {
-    splashWindow.hide();
+    splashWindow.close();
     mainWindow.maximize();
     mainWindow.show();
+  });
+
+  mainWindow.on("closed", () => {
+    mainWindow = null;
+  });
+
+  splashWindow.on("closed", () => {
+    splashWindow = null;
   });
 
   load();
 };
 
 rpc.on("ready", () => {
-  console.log("rpc ready");
-
   ipcMain.on("set-activity", (_, activity) => {
     setActivity(activity);
   });
