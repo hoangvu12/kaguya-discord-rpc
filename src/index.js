@@ -3,6 +3,9 @@ const path = require("path");
 const DiscordRPC = require("discord-rpc");
 
 const remoteMain = require("@electron/remote/main");
+
+require("update-electron-app")();
+
 remoteMain.initialize();
 
 // Set this to your Client ID.

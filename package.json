@@ -4,6 +4,7 @@
   "version": "1.1.5",
   "description": "An electron app let you watch anime/read manga on Kaguya with Discord Rich Presence support.",
   "main": "src/index.js",
+  "repository": "https://github.com/hoangvu12/kaguya-discord-rpc",
   "scripts": {
     "start": "electron-forge start",
     "package": "electron-forge package",
@@ -62,7 +63,8 @@
   "dependencies": {
     "@electron/remote": "^2.0.8",
     "discord-rpc": "^4.0.1",
-    "electron-squirrel-startup": "^1.0.0"
+    "electron-squirrel-startup": "^1.0.0",
+    "update-electron-app": "^2.0.1"
   },
   "devDependencies": {
     "@electron-forge/cli": "^6.0.0-beta.63",
