@@ -49,7 +49,8 @@
             "repository": {
               "owner": "hoangvu12",
               "name": "kaguya-discord-rpc"
-            }
+            },
+            "draft": true
           }
         }
       ]
