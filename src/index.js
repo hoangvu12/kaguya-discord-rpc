@@ -21,13 +21,17 @@ function setActivity(activity) {
   rpc.setActivity(activity);
 }
 
+const isSquirrelStartup = require("electron-squirrel-startup");
+
 // Handle creating/removing shortcuts on Windows when installing/uninstalling.
-if (require("electron-squirrel-startup")) {
+if (isSquirrelStartup) {
   // eslint-disable-line global-require
   app.quit();
 }
 
 const createWindow = () => {
+  if (isSquirrelStartup) return;
+
   const { width: screenWidth, height: screenHeight } =
     screen.getPrimaryDisplay().size;
 
