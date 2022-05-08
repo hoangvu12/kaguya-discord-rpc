@@ -1,7 +1,7 @@
 {
   "name": "kaguya-discord-rpc",
   "productName": "Kaguya",
-  "version": "1.1.5",
+  "version": "1.2.0",
   "description": "An electron app let you watch anime/read manga on Kaguya with Discord Rich Presence support.",
   "main": "src/index.js",
   "repository": "https://github.com/hoangvu12/kaguya-discord-rpc",
