@@ -82,10 +82,14 @@ const createWindow = () => {
 };
 
 rpc.on("ready", () => {
+  console.log("rpc ready");
+
   ipcMain.on("set-activity", (_, activity) => {
     setActivity(activity);
   });
 });
+
+rpc.login({ clientId }).catch(console.error);
 
 // This method will be called when Electron has finished
 // initialization and is ready to create browser windows.
